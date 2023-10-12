@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{{Images/}}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remarque}[section]
+\newtheorem{theorem}{Théorème}[section]
+
+\title{AICC}
+\author{Laura Paraboschi / Simon Lefort}
+\date{BA1-IN}
+
+\begin{document}
+
+\maketitle
+
+\section{Types of proofs}
+
+\subsection{Direct Proof}
+
+e.g. Prove "if a and b are real and positive integers, then $ (a+b)^{n} \geq a^{n} + b^{n} $." for 1. \\ \\
+\[ (a+b)^1 = a^1 + b^1 = a + b \]
+
+\subsection{Proof by contrapositive}
+
+e.g. prove P(n) : "if n is an integer and $ n^{3} + 5 $ is odd, then $ n $ is even". \\ \\
+Let's assume $ n $ is odd $ n = 2k $, then (after performing a rewrite), $ n^3 + 5 = 2(...) $, and is even.
+
+\[ p \implies q \]
+\[ \equiv \neg{q} \implies \neg{p} \]
+
+\subsection{Proof by contradiction}
+
+e.g prove P(n). \\ \\
+Let's assume $ n^3 + 5 $ is odd and $ n $ is odd. Then, $ n^2 $ is odd, $ n^3 $ is also odd, but the difference between $ n^3 $ (odd) and $ 5 $ (odd) is necessarily even.
+
+\[ \text{let } p \text{ and } \neg{q} \]
+\[ \text{show that they can not exist together.} \]
+
+\subsection{Vacuous Proof}
+
+e.g. prove "if n is a positive integer greater than one, then $n_{2} > n $" for 0.
+
+\[ p \implies q \]
+\[ F \implies q \]
+\[ \equiv T \text{ , no matter what } q \text{ is} \]
+
+\subsection{Trivial Proof}
+
+same as vacuous, but we know $ q $ and not $ p $.
+
+\[ p \implies q \]
+\[ p \implies T \]
+\[ \equiv T \text{ , no matter what } p \text{ is} \]
+
+\subsection{Proof by cases}
+
+\textcolor{red}{la difficulté est d'apprendre à choisir les cas à traiter} \\ \\
+e.g prove "100 is not the cube of a positive integer". \\ \\
+Poser d'abord que $ (n+1)^3 > n^3 $. \\ \\
+\textbf{Cas $ 1 \leq x \leq 4 $ :} \\
+$ 4^3 = 64 < 100 $ \\ \\
+\textbf{Cas $ x > 4 $ :} \\
+$ 5^3 = 125 > 100 $ \\ \\
+$ \implies \neg{\exists{x}} (x^3 = 100) $
+
+\end{document}
